@@ -1,4 +1,1 @@
-vanderpol-portrait
-==================
-
- Phase portrait for the Van der Pol oscillator.
+![](https://github.com/stemblab/vanderpol-portrait/blob/gh-pages/thumb.png)
