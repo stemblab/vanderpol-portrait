@@ -1,0 +1,81 @@
+<div id="text">
+
+  <h2>Vector fields and HTML canvas particles</h2>
+
+  <div class="left_col">
+
+    A [http://en.wikipedia.org/wiki/Vector_field, vector field] is
+    often shown as an array of arrows---each showing the magnitude and
+    direction of a vector at a point. Using HTML canvas, and a
+    <span class="pz_text" ref="example_note">simple particle
+      engine</span>, we can add some fun.
+
+    As an interesting example consider the
+    [http://en.wikipedia.org/wiki/Phase_portrait, phase portrait] for
+    the [http://en.wikipedia.org/wiki/Van_der_Pol_oscillator, Van der
+    Pol oscillator].  The oscillator has two states, $x$ and $y$,
+    which we represent as points on a plane.
+    <span class="pz_text" ref="vdp_note">The vector field</span> is
+    the "velocity" at each point:
+
+    $$
+    \begin{align}
+    \dot{x} &= x - x^3/3 + y \nonumber \\
+    \dot{y} &= -x \nonumber
+    \end{align}
+    $$
+
+    The plot shows the trajectory for randomly selected starting
+    points (i.e., states). The particles migrate towards a
+    [http://en.wikipedia.org/wiki/Attractor#Limit_cycle, limit cycle
+    attractor].
+
+    Each particle expires after a set distance and new particles are
+    added, at a specified rate, up to a maximum (see also [b00gf, this
+    blab]).
+
+  </div>
+
+  <div class="pz_note" id="example_note">
+    Original motivation from
+    [http://html5hub.com/build-a-javascript-particle-system, here].
+  </div>
+
+  <div class="pz_note" id="vdp_note">
+    The dots indicate rate-of-change with time, so $\dot{x}$ is the
+    speed in the $x$ direction. Thus $[\dot{x}~\dot{y}]^T$ defines a
+    vector field---a vector for each value of $x$ and $y$.  Note that
+    there are several equivalent ways to write the Van der Pol
+    equations.
+  </div>
+
+  <div class="right_col">
+
+    <div id="container"> 
+      <canvas id="vector-field" class="vector-field"></canvas>
+      <div id="chart"></div>
+      <div id="checkboxes" class="canvas-text">
+        <input type="checkbox" id="persist" value="showSunPhotons">Persistence<br>
+      </div>
+      <div id="x-label">$x$</div>
+      <div id="y-label">$y$</div>
+    </div>
+    
+  </div>
+
+  <div class="clear"></div>
+
+  <hr/>
+  
+  <br/>
+  
+  <div class="left_col">
+    <div data-file="main.coffee"></div>
+  </div>    
+
+  <div class="right_col">
+    <div data-eval="main.coffee"></div>
+  </div>
+
+</div>
+

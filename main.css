@@ -1,0 +1,93 @@
+svg {
+    overflow: visible;
+}
+
+#text {
+    width: 960px;
+    margin: 0 auto;
+    margin-bottom: 0px;
+}
+
+.left_col {
+    float: left;
+    width: 450px;
+}
+
+.right_col {
+    float: right;
+    width: 450px;
+}
+
+.clear {
+    clear: both;
+}
+
+#container {
+    position: relative;
+    width: 450px;
+    height: 450px;
+    margin: 0 auto;
+    top: 10px;
+    z-index: 10;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+}
+
+.vector-field {
+    position: absolute;
+    top: 65px;
+    left: 65px;
+    background-color: transparent;
+    /*border: 1px dashed green;*/
+    border-radius: 10px;
+}
+      
+#chart {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: transparent;
+    /*border: 1px dashed red;*/
+}
+
+.axis text {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+#checkboxes {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    width: 200px;
+    height: 100px;
+    background: transparent;
+    /* border: 1px dashed gray; */
+}
+
+#x-label {
+    position: absolute;
+    top: 420px;
+    left: 219px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    /* border: 1px dashed gray; */
+}
+
+#y-label {
+    position: absolute;
+    top: 218px;
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    /* border: 1px dashed gray; */
+}
+
