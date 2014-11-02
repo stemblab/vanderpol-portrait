@@ -1,23 +1,5 @@
 #!vanilla
 
-# Classes
-
-###
-class $blab.Figure # Namespace for globals
-
-    @xMax = 4 # horizontal plot limit
-    @yMax = 4 # vertical plot limit
-    @margin = {top: 65, right: 65, bottom: 65, left: 65}
-    @width = 450 - @margin.left - @margin.top
-    @height = 450 - @margin.left - @margin.top
-    @xScale = d3.scale.linear() # sim units -> screen units
-        .domain([-@xMax, @xMax])
-        .range([0, @width])
-    @yScale = d3.scale.linear() # sim units -> screen units
-        .domain([-@yMax, @yMax])
-        .range([@height, 0])
-###
-    
 class $blab.d3Object
 
     constructor: (id) ->
@@ -33,14 +15,8 @@ class $blab.d3Object
         
 class $blab.Oscillator extends $blab.d3Object
         
-    #margin = $blab.Figure.margin
-    #width = $blab.Figure.width
-    #height = $blab.Figure.height
-
     constructor: (X, @spec) ->
         super X
-
-        #@margin = margin
 
         # Clear any previous event handlers.
         @obj.on("click", null)  
@@ -126,11 +102,10 @@ class $blab.Oscillator extends $blab.d3Object
             .domain([-@spec.yMax, @spec.yMax])
             .range([@spec.height, 0])
 
-        #@xscale = $blab.Figure.xScale
         @xAxis = d3.svg.axis()
             .scale(@xScale)
             .orient("bottom")
-        #@yscale = $blab.Figure.yScale
+
         @yAxis = d3.svg.axis()
             .scale(@yScale)
             .orient("left")

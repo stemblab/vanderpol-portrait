@@ -22,32 +22,96 @@ svg {
     clear: both;
 }
 
-#container {
-    position: relative;
-    width: 450px;
-    height: 450px;
-    margin: 0 auto;
-    top: 10px;
-    z-index: 10;
+.text-button {
+    cursor: pointer;
+    background: #ddf;
+    padding-left: 5px;
+    padding-right: 5px;
     border-radius: 10px;
-    border: 2px solid #ccc;
 }
 
 .vector-field {
     position: absolute;
+    background-color: transparent;
+}
+
+#VdP-vector-field {
     top: 65px;
     left: 65px;
-    background-color: transparent;
-    /*border: 1px dashed green;*/
-    border-radius: 10px;
 }
-      
-#chart {
+
+#VdP-fig {
+    position: relative;
+    top: 0px;
+    left: 30px;
+    width: 900px;
+    height: 450px;
+    background: transparent;
+}
+     
+#VdP-oscillator {
     position: absolute;
     top: 0px;
     left: 0px;
     background: transparent;
-    /*border: 1px dashed red;*/
+}
+
+#VdP-controls {
+    position: absolute;
+    top: 0;
+    left: 45px;
+    width: 360px;
+    height: 50px;
+    background: transparent;
+}
+
+#VdP-checkbox {
+    position: absolute;
+    top: 27px;
+    left: 15px;
+    width: 120px;
+    height: 20px;
+    background: transparent;
+}
+
+#mu-slider {
+    position: absolute;
+    top: 12px;
+    left: 175px;
+    width: 150px;
+    height: 50px;
+    background: transparent;
+}
+
+#mu-value {
+    position: absolute;
+    top: 27px;
+    left: 350px;
+}
+
+#mu-label {
+    position: absolute;
+    top: 27px;
+    left: 150px;
+}
+
+
+#x-label {
+    position: absolute;
+    bottom: 15px;
+    left: 220px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+}
+
+#y-label {
+    position: absolute;
+    bottom: 230px;
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
 }
 
 .axis text {
@@ -59,35 +123,5 @@ svg {
   fill: none;
   stroke: #000;
   shape-rendering: crispEdges;
-}
-
-#checkboxes {
-    position: absolute;
-    top: 10px;
-    left: 20px;
-    width: 200px;
-    height: 100px;
-    background: transparent;
-    /* border: 1px dashed gray; */
-}
-
-#x-label {
-    position: absolute;
-    top: 420px;
-    left: 219px;
-    width: 20px;
-    height: 20px;
-    background: transparent;
-    /* border: 1px dashed gray; */
-}
-
-#y-label {
-    position: absolute;
-    top: 218px;
-    left: 20px;
-    width: 20px;
-    height: 20px;
-    background: transparent;
-    /* border: 1px dashed gray; */
 }
 

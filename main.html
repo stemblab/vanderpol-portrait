@@ -1,6 +1,6 @@
 <div id="text">
 
-  <h2>Vector fields and HTML canvas particles</h2>
+  <h2>Van der Pol phase portrait</h2>
 
   <div class="left_col">
 
@@ -8,7 +8,7 @@
     often shown as an array of arrows---each showing the magnitude and
     direction of a vector at a point. Using HTML canvas, and a
     <span class="pz_text" ref="example_note">simple particle
-      engine</span>, we can add some fun.
+      engine</span>, we can add some fun (fork to see code).
 
     As an interesting example consider the
     [http://en.wikipedia.org/wiki/Phase_portrait, phase portrait] for
@@ -20,8 +20,8 @@
 
     $$
     \begin{align}
-    \dot{x} &= x - x^3/3 + y \nonumber \\
-    \dot{y} &= -x \nonumber
+    \dot{x} &= y \nonumber \\
+    \dot{y} &= \mu(1-x^2)y-x \nonumber
     \end{align}
     $$
 
@@ -31,8 +31,10 @@
     attractor].
 
     Each particle expires after a set distance and new particles are
-    added, at a specified rate, up to a maximum (see also [b00gf, this
-    blab]).
+    added, at a specified rate, up to a maximum.
+    <span id = "VdP-start-button" class = "text-button">click to
+      start</span> <span id = "VdP-stop-button" class =
+			 "text-button">click to stop</span>
 
   </div>
 
@@ -51,30 +53,30 @@
 
   <div class="right_col">
 
-    <div id="container"> 
-      <canvas id="vector-field" class="vector-field"></canvas>
-      <div id="chart"></div>
-      <div id="checkboxes" class="canvas-text">
-        <input type="checkbox" id="persist" value="showSunPhotons">Persistence<br>
+    <div id="VdP-fig">
+
+      <canvas id="VdP-vector-field" class="vector-field"></canvas>
+
+      <div id="VdP-oscillator"></div>
+      
+      <div id = "VdP-controls">
+
+	<div id = "VdP-checkbox">
+	  <input type="checkbox" id="persist">Persistence</input>
+	</div>
+
+	<input type="range" id="mu-slider" step="0.1" min="0" max="5" value="1"></input>
+
+	<div id="mu-value"></div>
+	<div id="mu-label">$\mu$</div>
+
       </div>
+
       <div id="x-label">$x$</div>
-      <div id="y-label">$y$</div>
+      <div id="y-label">$\dot{x}$</div>
+   
     </div>
-    
-  </div>
 
-  <div class="clear"></div>
-
-  <hr/>
-  
-  <br/>
-  
-  <div class="left_col">
-    <div data-file="main.coffee"></div>
-  </div>    
-
-  <div class="right_col">
-    <div data-eval="main.coffee"></div>
   </div>
 
 </div>

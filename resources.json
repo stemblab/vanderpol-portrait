@@ -3,5 +3,7 @@
     "http://puzlet.org/ode-fixed/runge-kutta.coffee",
     "main.html",
     "main.css",
+    "osc.coffee",
+    "vdp.coffee",
     "main.coffee"
 ]
