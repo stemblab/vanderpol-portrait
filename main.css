@@ -125,3 +125,5 @@ svg {
   shape-rendering: crispEdges;
 }
 
+.foot .puzlet-link { float:left }
+.foot .org-link { float:right }
